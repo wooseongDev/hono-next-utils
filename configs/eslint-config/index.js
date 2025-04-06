@@ -12,6 +12,7 @@ export const typescript = tseslint.config(
   js.configs.recommended,
   tseslint.configs.recommended,
   importPlugin.flatConfigs.recommended,
+  importPlugin.flatConfigs.typescript,
   {
     plugins: {
       'simple-import-sort': simpleImportSort,
