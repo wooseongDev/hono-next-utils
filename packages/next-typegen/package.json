@@ -1,0 +1,33 @@
+{
+  "name": "@hono-next-utils/next-typegen",
+  "version": "0.0.0",
+  "private": true,
+  "author": "wooseongDev <wooseong.dev@gmail.com>",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "dependencies": {
+    "tsup": "^8.4.0"
+  },
+  "devDependencies": {
+    "@hono-next-utils/eslint-config": "workspace:*",
+    "@hono-next-utils/tsconfig": "workspace:*",
+    "@types/node": "^20",
+    "next": "15.2.4",
+    "typescript": "5.8.2",
+    "webpack": "^5.98.0"
+  },
+  "peerDependencies": {
+    "next": ">=14"
+  }
+}

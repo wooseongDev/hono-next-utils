@@ -2,6 +2,7 @@
   "name": "with-next-typegen",
   "version": "0.1.0",
   "private": true,
+  "author": "wooseongDev <wooseong.dev@gmail.com>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -17,6 +18,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@hono-next-utils/eslint-config": "workspace:*",
+    "@hono-next-utils/next-typegen": "workspace:*",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
