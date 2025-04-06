@@ -1,0 +1,16 @@
+{
+  "name": "@hono-next-utils/eslint-config",
+  "version": "0.0.0",
+  "author": "wooseongDev <wooseong.dev@gmail.com>",
+  "type": "module",
+  "main": "index.js",
+  "module": "index.js",
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.6",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "typescript-eslint": "^8.29.0"
+  }
+}

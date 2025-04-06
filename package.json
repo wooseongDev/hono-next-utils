@@ -1,0 +1,19 @@
+{
+  "name": "hono-next-utils",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "echo": "echo 'Hello, world!'"
+  },
+  "devDependencies": {
+    "eslint": "9.24.0",
+    "prettier": "3.5.3",
+    "turbo": "2.5.0",
+    "typescript": "5.8.2"
+  },
+  "packageManager": "pnpm@9.1.3",
+  "engines": {
+    "node": ">=20.13.1",
+    "pnpm": "9.1.3"
+  }
+}
