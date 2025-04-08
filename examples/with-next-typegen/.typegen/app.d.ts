@@ -11,7 +11,17 @@ declare const app: hono_hono_base.HonoBase<hono_types.BlankEnv, {
                 };
             };
             output: {
-                ok: boolean;
+                ok: true;
+                field1: "field1";
+                field2: 2;
+                field3: true;
+                field4: [1, 2, "3"];
+                field5: {
+                    readonly a: 1;
+                    readonly b: "2";
+                    readonly c: [3];
+                };
+                field6: null;
             };
             outputFormat: "json";
             status: hono_utils_http_status.ContentfulStatusCode;

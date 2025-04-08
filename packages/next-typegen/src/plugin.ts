@@ -1,28 +1,25 @@
 import { build } from 'tsup'
-import type ts from 'typescript'
+import ts from 'typescript'
 import type { Compiler, WebpackOptionsNormalized } from 'webpack'
+
+import { baseCompilerOptions, defaultTsupOptions } from './config'
 
 let initialized = false
 
 async function runNextTypegenDev() {
   await build({
+    ...defaultTsupOptions,
+
     watch: true,
     entry: ['./src/server/app.ts'],
     outDir: './.typegen',
-    clean: false,
-    bundle: false,
     dts: {
       only: true,
+      resolve: true,
       compilerOptions: <ts.CompilerOptions>{
-        noEmit: false,
-        declaration: true,
-        emitDeclarationOnly: true,
-        checkJs: false,
-        skipLibCheck: true,
-        preserveSymlinks: false,
-        noEmitOnError: undefined,
-        incremental: true,
-        tsBuildInfoFile: './node_modules/.typegen/tsconfig.tsbuildinfo',
+        ...baseCompilerOptions,
+
+        baseUrl: process.cwd(),
       },
     },
     // silent: true,

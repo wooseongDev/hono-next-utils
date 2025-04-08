@@ -1,11 +1,10 @@
+import { response } from '@/server/response'
 import { Hono } from 'hono'
 
 export const app = new Hono()
   .basePath('/api')
   .get('/route1/:id', (c) => {
-    return c.json({
-      ok: true,
-    })
+    return response(c)
   })
   .get('/route2/:id', (c) => {
     return c.json({
