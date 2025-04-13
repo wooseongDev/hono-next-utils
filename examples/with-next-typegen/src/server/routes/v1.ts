@@ -1,10 +1,12 @@
-import { response } from '@/server/response'
+import { storage } from '@/server/storage'
+import { sum } from '@/utils/sum'
 import { Hono } from 'hono'
 
-export const app = new Hono()
-  .basePath('/api')
+export const v1Route = new Hono()
   .get('/route1/:id', (c) => {
-    return response(c)
+    return c.json({
+      ok: true,
+    })
   })
   .get('/route2/:id', (c) => {
     return c.json({
@@ -1001,5 +1003,3 @@ export const app = new Hono()
       ok: true,
     })
   })
-
-export type App = typeof app
