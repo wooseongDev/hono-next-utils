@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js with Next-Typegen Example
+
+This example demonstrates how to use the `next-typegen` library with a Next.js project to automatically generate TypeScript type definitions.
+
+## Features Demonstrated
+
+- Setting up Next-Typegen in a Next.js project
+- Custom configuration of the plugin
+- Generated TypeScript definition files in the `.typegen` directory
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
 # or
-pnpm dev
-# or
-bun dev
+pnpm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000/api/example](http://localhost:3000/api/example) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How Next-Typegen is Configured
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This example project uses a custom configuration for Next-Typegen. Check out the `next.config.ts` file:
 
-## Learn More
+```typescript
+import type { NextConfig } from 'next'
+import { createNextTypegen } from '@hono-next-utils/next-typegen'
+import { resolve } from 'node:path'
 
-To learn more about Next.js, take a look at the following resources:
+const nextConfig: NextConfig = {
+  /* config options here */
+}
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+const withNextTypegen = createNextTypegen({
+  entry: resolve(__dirname, './src/server-app.ts'),
+  outDir: resolve(__dirname, './.typegen'),
+  tsconfig: resolve(__dirname, './tsconfig.json'),
+  silent: false,
+})
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+export default withNextTypegen(nextConfig)
+```
 
-## Deploy on Vercel
+## Generated Types
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+When you run the development server, Next-Typegen will automatically generate type definitions in the `.typegen` directory. These types are derived from your application code and can be imported in your TypeScript files.
