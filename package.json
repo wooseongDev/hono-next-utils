@@ -1,11 +1,14 @@
 {
   "name": "hono-next-utils",
   "private": true,
+  "author": "wooseongDev <wooseong.dev@gmail.com>",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "echo": "echo 'Hello, world!'"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.28.1",
     "eslint": "9.24.0",
     "prettier": "3.5.3",
     "turbo": "2.5.0",
