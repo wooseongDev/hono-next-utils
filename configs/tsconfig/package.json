@@ -1,8 +1,0 @@
-{
-    "name": "@hono-next-utils/tsconfig",
-    "private": true,
-    "author": "wooseongDev <wooseong.dev@gmail.com>",
-    "files": [
-        "base.json"
-    ]
-}
