@@ -16,7 +16,8 @@
   },
   "scripts": {
     "build": "tsup",
-    "check-exports": "attw --pack ."
+    "check-exports": "attw --pack .",
+    "local-release": "changeset version && changeset publish"
   },
   "dependencies": {
     "tsup": "^8.4.0"
