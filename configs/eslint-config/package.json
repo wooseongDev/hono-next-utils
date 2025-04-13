@@ -1,7 +1,11 @@
 {
   "name": "@hono-next-utils/eslint-config",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "wooseongDev <wooseong.dev@gmail.com>",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
   "type": "module",
   "main": "index.js",
   "module": "index.js",
