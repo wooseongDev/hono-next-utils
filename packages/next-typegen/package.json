@@ -1,6 +1,6 @@
 {
   "name": "@hono-next-utils/next-typegen",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "wooseongDev <wooseong.dev@gmail.com>",
   "license": "MIT",
   "publishConfig": {
