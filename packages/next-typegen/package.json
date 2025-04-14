@@ -19,8 +19,7 @@
   },
   "scripts": {
     "build": "tsup",
-    "check-exports": "attw --pack .",
-    "local-release": "changeset version && changeset publish"
+    "check-exports": "attw --pack ."
   },
   "dependencies": {
     "tsup": "^8.4.0"
@@ -34,6 +33,7 @@
     "webpack": "^5.98.0"
   },
   "peerDependencies": {
-    "next": ">=14"
+    "next": ">=14",
+    "typescript": ">=5"
   }
 }
